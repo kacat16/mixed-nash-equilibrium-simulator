@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Interaktivno okruzenje za simulaciju i analizu mesovitih Nashovih ekvilibrijuma u simultanim igrama"
+run/main_scene="uid://b01hpn8j8v3ck"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scenes/GameManagerScene.tscn"
+
+[dotnet]
+
+project/assembly_name="NashEquilibrium"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

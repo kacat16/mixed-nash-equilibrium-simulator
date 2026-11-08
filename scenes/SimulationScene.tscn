@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://ypgvv2u9xp6f5"]
+
+[ext_resource type="Script" path="res://scripts/SimulationController.cs" id="1"]
+
+[node name="SimulationScene" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(500, 300)
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatsPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 210.0
+theme_override_colors/panel_color = Color(0.1, 0.1, 0.15, 0.8)
+
+[node name="StatsVBox" type="VBoxContainer" parent="CanvasLayer/StatsPanel"]
+layout_mode = 1
+anchors_left = 0.0
+anchors_top = 0.0
+anchors_right = 1.0
+anchors_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+theme_override_constants/separation = 5
+
+[node name="GenerationLabel" type="Label" parent="CanvasLayer/StatsPanel/StatsVBox"]
+layout_mode = 2
+text = "Generacija: 0"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.2, 0.8, 1.0, 1.0)
+
+[node name="PopulationLabel" type="Label" parent="CanvasLayer/StatsPanel/StatsVBox"]
+layout_mode = 2
+text = "Populacija: 0"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1.0)
